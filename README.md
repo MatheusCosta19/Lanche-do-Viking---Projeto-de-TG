@@ -1,1 +1,4 @@
-# Lanche-do-Viking---Projeto-de-TG
+# Lanche-do-Viking
+*Lanche do viking* é uma lanchonete localizada na cidade de Guarulhos, São Paulo, conhecida pelos seus lanches *brutais* e altamente personalizados. Visto que a franquia está se expandindo, almeja-se alcançar o maior número de clientes possível, em diversas regiões do Brasil. Para alcançar esse feito foi necessário planejar cuidadosamente um meio de comunicação expansível para que os clientes façam pedidos de suas casas, seja para retirar na filial, seja para pedir em delivery. A solução aprovada foi o **desenvolvimento de uma plataforma web** que transmita a maestria dos produtos do estabelecimento, sem sacrificar sua principal característica: *alta personalização dos pedidos*. Qualquer cliente poderá se deleitar dos produtos oferecidos e aproveitar o melhor do *fast-food* com a suculência e a tradição que somente o *Lanche do viking* pode oferecer.
+
+> NOTA: Esta plataforma em questão é fictícia, visto que trata-se de um projeto de faculdade
