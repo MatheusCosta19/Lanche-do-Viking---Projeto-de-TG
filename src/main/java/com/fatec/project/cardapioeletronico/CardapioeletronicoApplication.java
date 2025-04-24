@@ -8,7 +8,7 @@ public class CardapioeletronicoApplication {
 
 /*AFAZERES
  * Certifique-se de atualizar o READ-ME periodicamente, sempre que for exigido;
- * Projeto deverá ter, em breve, banco de dados PostgreSQL, pois ainda não foi incluído;
+ * Projeto deverá ter, em breve, banco de dados PostgreSQL, pois ainda não foram incluídas suas dependências;
  * Será usado arrayLists para simular um banco de dados, por enquanto, para fins didádicos
  */
 
