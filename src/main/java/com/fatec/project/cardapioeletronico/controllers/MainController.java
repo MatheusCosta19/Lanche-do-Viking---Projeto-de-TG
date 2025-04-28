@@ -1,6 +1,7 @@
 package com.fatec.project.cardapioeletronico.controllers;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -16,13 +17,13 @@ public class MainController {
         return "index";
     }
 
-    @GetMapping("/login")
+    @PostMapping("/login")
     public String loginOnPlatform() {
 
         return "LoginPage";//colocar o nome da página de Login, quando existir
     }
 
-    @GetMapping("/register")
+    @PostMapping("/register")
     public String registerOnPlatform(@RequestParam String param) {
         return new String();
     }
