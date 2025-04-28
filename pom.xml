@@ -5,14 +5,14 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.4.4</version>
+		<version>3.4.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.fatec.project</groupId>
 	<artifactId>cardapioeletronico</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>cardapioeletronico</name>
-	<description>Demo project for Spring Boot</description>
+	<description>A project for fatec</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -30,6 +30,13 @@
 		<java.version>21</java.version>
 	</properties>
 	<dependencies>
+
+		<!-- Starter do Thymeleaf (essencial para usar Thymeleaf com Spring Boot) -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
