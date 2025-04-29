@@ -6,7 +6,7 @@ import java.util.Date;
 public class ModelADM extends ModelPerson{
 
     private String CNPJ;
-    private byte profile_Picture;
+    private byte[] profile_Picture;
 
     public String getCNPJ() {
         return CNPJ;
@@ -14,10 +14,11 @@ public class ModelADM extends ModelPerson{
     public void setCNPJ(String cNPJ) {
         CNPJ = cNPJ;
     }
-    public byte getProfile_Picture() {
+    public byte[] getProfile_Picture() {
+        
         return profile_Picture;
     }
-    public void setProfile_Picture(byte profile_Picture) {
+    public void setProfile_Picture(byte[] profile_Picture) {
         this.profile_Picture = profile_Picture;
     }
     

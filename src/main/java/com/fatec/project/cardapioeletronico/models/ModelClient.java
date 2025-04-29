@@ -5,8 +5,8 @@ import java.util.Date;
 public class ModelClient {
     private String client_Name;
     private String client_Pass;
-    private String client_Email;
-    private String   bith_Date_Client;
+    private String client_Email;//tranformar em DATE
+    private String   bith_Date_Client;  //transformar em DATE
 
     public String getclient_Name() {
         return client_Name;

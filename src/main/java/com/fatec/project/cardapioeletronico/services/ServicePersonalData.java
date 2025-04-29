@@ -14,11 +14,12 @@ public class ServicePersonalData {
     private final List<ModelClient> client = new ArrayList<>();    //armazenar em memória os dados dos clientes
 
     //salvar na lista
-    public ModelClient save(ModelClient modelClient){
+    public ModelClient savePersonalData(ModelClient modelClient){
         client.add(modelClient);
 
         return modelClient;
     }
+    
 
     //mostrar o conteúdo da lista
     public List<ModelClient> list(){

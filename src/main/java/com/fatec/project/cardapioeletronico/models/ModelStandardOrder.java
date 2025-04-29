@@ -1,13 +1,14 @@
 package com.fatec.project.cardapioeletronico.models;
 
 //Padrão para pedidos dos cliente
-public class ModelStandardOrder{
+public class ModelStandardOrder extends ModelCustomOrder{
 
     private String order_Name;
     private int    order_Quantity;
     private int    discount;
     private String payment_Tipe; //haverá alguns tipos de pagamento. Colocar em uma estrutura de dados com os tipos de pagamento já pré-dispostos
     private double final_Value;
+    private boolean isCustom;
 
 
     public String getOrder_Name() {
@@ -40,4 +41,11 @@ public class ModelStandardOrder{
     public void setFinal_Value(double final_Value) {
         this.final_Value = final_Value;
     }
+    public boolean isCustom() {
+        return isCustom;
+    }
+    public void setCustom(boolean isCustom) {
+        this.isCustom = isCustom;
+    }
+
 }
