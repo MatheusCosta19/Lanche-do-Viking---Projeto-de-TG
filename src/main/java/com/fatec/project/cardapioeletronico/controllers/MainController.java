@@ -24,7 +24,7 @@ public class MainController {
     //página de cadastro
     @PostMapping("/register")
     public String registerOnPlatform() {
-        return ""; //página de registro
+        return "cadastro"; //página de registro
     }
     
     //em caso de erro...

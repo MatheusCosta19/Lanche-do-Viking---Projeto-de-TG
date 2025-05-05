@@ -1,7 +1,5 @@
 package com.fatec.project.cardapioeletronico.models;
 
-import java.util.Date;
-
 //modelo para o adm. Herda da classe ModelPerson
 public class ModelADM extends ModelPerson{
 
@@ -23,10 +21,9 @@ public class ModelADM extends ModelPerson{
     }
     
     //da classe genérica
-    
-    @Override
-    public Date getBirth_Date() {
-        return super.getBirth_Date();
+
+    public String getBirthDate(){
+        return super.getbirthDate();
     }
 
     @Override
@@ -35,7 +32,7 @@ public class ModelADM extends ModelPerson{
     }
 
     @Override
-    public long getID() {
+    public String getID() {
         return super.getID();
     }
 

@@ -1,35 +1,27 @@
 package com.fatec.project.cardapioeletronico.models;
 
-import java.util.Date;
 
 public class ModelClient {
-    private String client_Name;
-    private String client_Pass;
-    private String client_Email;//tranformar em DATE
-    private String   bith_Date_Client;  //transformar em DATE
+    private String clientName;
+    private String clientPass;
+    private String clientEmail;//tranformar em DATE
 
-    public String getclient_Name() {
-        return client_Name;
+    public String getclientName() {
+        return clientName;
     }
-    public void setclient_Name(String client_Name) {
-        this.client_Name = client_Name;
+    public void setclientName(String clientName) {
+        this.clientName = clientName;
     }
-    public String getclient_Pass() {
-        return client_Pass;
+    public String getclientPass() {
+        return clientPass;
     }
-    public void setclient_Pass(String client_Pass) {
-        this.client_Pass = client_Pass;
+    public void setclientPass(String clientPass) {
+        this.clientPass = clientPass;
     }
-    public String getclient_Email() {
-        return client_Email;
+    public String getclientEmail() {
+        return clientEmail;
     }
-    public void setclient_Email(String client_Email) {
-        this.client_Email = client_Email;
-    }
-    public String getbith_Date_Client() {
-        return bith_Date_Client;
-    }
-    public void setbith_Date_Client(String bith_Date_Client) {
-        this.bith_Date_Client = bith_Date_Client;
+    public void setclientEmail(String clientEmail) {
+        this.clientEmail = clientEmail;
     }
 }
