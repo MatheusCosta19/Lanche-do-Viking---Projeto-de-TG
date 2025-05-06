@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.fatec.project.cardapioeletronico.models.ModelPerson;
 
-public interface RepositoryPerson extends JpaRepository<ModelPerson, String>{
+public interface Repository_Person extends JpaRepository<ModelPerson, String>{
     Optional<ModelPerson> findByEmail(String login);
 
 }

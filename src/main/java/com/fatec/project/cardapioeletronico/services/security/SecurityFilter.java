@@ -7,11 +7,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import com.fatec.project.cardapioeletronico.models.ModelPerson;
-import com.fatec.project.cardapioeletronico.repositories.RepositoryPerson;
+import com.fatec.project.cardapioeletronico.repositories.Repository_Person;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.http.HttpServletRequest;
@@ -19,13 +20,14 @@ import jakarta.servlet.http.HttpServletResponse;
 
 //filtro de segurança dos tokens
 @Component
-public class securityFilter extends OncePerRequestFilter{
+public class SecurityFilter extends OncePerRequestFilter{
 
     @Autowired
     ServiceToken tokenService;
 
     @Autowired
-    RepositoryPerson personRepository;
+    Repository_Person personRepository;
+
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain){
@@ -33,10 +35,12 @@ public class securityFilter extends OncePerRequestFilter{
         var login = tokenService.validToken(token);
 
         if(login != null){
-            ModelPerson person = personRepository.findByEmail(login).orElseThrow(() -> new RuntimeException("Usuário não encontrado"));
+            //buscar usuário
+            ModelPerson person = personRepository.findByEmail(login).orElseThrow(() -> new UsernameNotFoundException("Usuário não encontrado"));
             var authorities = Collections.singletonList(new SimpleGrantedAuthority("ROLE_USER"));//autoridade da aplicação, por enquanto, é o usuário
+            //objeto de autenticação
             var authentication = new UsernamePasswordAuthenticationToken(person, null, authorities);
-            SecurityContextHolder.getContext().setAuthentication(authentication);
+            SecurityContextHolder.getContext().setAuthentication(authentication); //contexto de segurança para validar
         }
 
     }
